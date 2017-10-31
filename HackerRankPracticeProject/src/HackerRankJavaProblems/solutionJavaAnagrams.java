@@ -10,7 +10,40 @@ public class solutionJavaAnagrams {
 	
 	 static boolean isAnagram(String a, String b) {
 	    char[] a_arr= a.toLowerCase().toCharArray();
+	    
 	    char[] b_arr=b.toLowerCase().toCharArray();
+	    int same=0;
+	    		System.out.println("size of arrays"+ a_arr.length+","+b_arr.length);
+	 
+	    		if(a_arr.length<=b_arr.length)
+	    		{
+	    for(int i=0;i<b_arr.length;i++)
+	    {
+	    	for(int j=0;j<a_arr.length;j++)
+	    	{
+	    	  if(a_arr[j]==b_arr[i])
+	    		  same++;
+	    		  
+	    	}
+	    }
+	    		}
+	    		
+
+	    		if(a_arr.length>=b_arr.length)
+	    		{
+	    for(int i=0;i<a_arr.length;i++)
+	    {
+	    	for(int j=0;j<b_arr.length;j++)
+	    	{
+	    	  if(a_arr[i]==b_arr[j])
+	    		  same++;
+	    		  
+	    	}
+	    }
+	    		}
+	     int ctr=a_arr.length-same;
+	     int bctr=b_arr.length-same;
+	    System.out.println((ctr+bctr));
 	  sort(a_arr);
 	  sort(b_arr);
 	     

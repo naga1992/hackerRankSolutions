@@ -39,7 +39,7 @@ public class StringsMakingAnagrams {
 	      common.retainAll(listB);
 	       
 	       common.removeAll(Collections.singleton(null));
-	       System.out.println("the commsdfs"+ common);
+	     //  System.out.println("the commsdfs"+ common);
 	      return  (a_arr.length-common.size()+b_arr.length-common.size());
 		
 		 
